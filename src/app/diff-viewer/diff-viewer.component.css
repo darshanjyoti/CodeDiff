@@ -1,0 +1,88 @@
+/* Existing styles */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(253, 41, 41, 0.8); /* Subtle shadow for a lifted effect */
+  }
+  
+  .bg-light {
+    background-color: #ecf0f4; /* Light grey background */
+  }
+  
+  .bg-dark {
+    background-color: #343a40; /* Dark background */
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da; /* Border color */
+    border-radius: 4px;
+  }
+  
+  .btn {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
+  
+  .change {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  
+  /* Additional styles for dark mode */
+  .dark-mode .container {
+    box-shadow: 0 4px 8px rgb(40, 8, 224); /* Update shadow color for dark mode */
+  }
+  
+  .dark-mode .bg-light {
+    background-color: #222; /* Dark background */
+    color: #fff; /* Light text color */
+  }
+  
+  .dark-mode .form-control {
+    background-color: #333; /* Dark input background */
+    color: #ccc; /* Light input text color */
+    border-color: #444; /* Darker border color */
+  }
+  
+  .dark-mode .btn {
+    background-color: #007bff; /* Blue button background */
+    border-color: #007bff; /* Blue button border */
+    color: #fff; /* Light button text color */
+  }
+  
+  .dark-mode .btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3; /* Darker blue border on hover */
+  }
+  
+  .dark-mode .change {
+    color: #ccc; /* Light text color */
+  }
+  
+  .dark-mode h1,
+  .dark-mode h6,
+  .dark-mode p
+  {
+    color: #ccc; /* Light text color for headings and paragraphs */
+  }
+  .dark-mode .font-weight-bold{
+    color: #ccc; 
+  }
+  .code-diff {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  

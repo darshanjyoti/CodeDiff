@@ -1,0 +1,26 @@
+<div class="container mt-5 p-4 shadow rounded" [ngClass]="{'bg-light': !isDarkMode, 'bg-dark': isDarkMode}">
+    <button class="btn btn-primary mt-2" (click)="toggleDarkMode()">{{mode}}</button>
+    <h1 class="text-center mb-4">Code Diff Viewer</h1>
+    <p class="text-center mb-4">Please upload two versions of a file to compare their differences line by line.</p>
+    <div class="form-group">
+      <label for="file1" class="font-weight-bold">Upload Version 1:</label>
+      <input type="file" id="file1" (change)="onFileChange($event, 'left')" class="form-control mb-3">
+      <h6>File size: {{leftFileSize}}</h6>
+    </div>
+    <div class="form-group">
+      <label for="file2" class="font-weight-bold">Upload Version 2:</label>
+      <input type="file" id="file2" (change)="onFileChange($event, 'right')" class="form-control mb-3">
+      <h6>File size: {{rightFileSize}}</h6>
+    </div>
+    <div class="text-center">
+      <button class="btn btn-primary mt-2 ml-3" (click)="onSingleView()">Unified View</button>
+      <button class="btn btn-primary mt-2 ml-5" (click)="onSideView()">Side-by-Side View</button>
+    </div>
+    <div class="change">
+        <h6>Lines added:  {{linesAdded}}</h6> 
+        <h6>Lines remove:  {{linesRemoved}}</h6> 
+        <h6>Lines unchanged:  {{unchangedLines}}</h6>
+    </div>
+    <div class="mt-4" [innerHTML]="diffHtml"></div>
+    <button class="btn btn-success mt-2 ml-2" (click)="downloadDiff('html')" [disabled]="!enableDownload">Download Diff</button>
+</div>
